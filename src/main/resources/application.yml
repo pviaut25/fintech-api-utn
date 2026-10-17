@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/fintech_db?createDatabaseIfNotExist=true}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update # Solo desarrollo; producción: migraciones Flyway
+server:
+  port: 8080
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
